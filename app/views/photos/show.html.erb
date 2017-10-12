@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image data:</strong>
+  <img src="<%= @photo.image_url %>">
+ <!--  <%= @photo.image_data %> -->
+</p>
+<!-- 
+<p>
+  <strong>User:</strong>
+  <%= @photo.user %>
+</p> -->
+
+<p>
+  <strong>Caption:</strong>
+  <%= @photo.caption %>
+</p>
+
+<%= link_to 'Comments', photo_comments_path(@photo) %> |
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

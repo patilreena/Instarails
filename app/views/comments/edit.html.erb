@@ -1,0 +1,8 @@
+<h1>Editing comment</h1>
+
+<%= render 'form' %>
+
+<!-- /posts/:post_id/comments/:id -->
+<%= link_to 'Show', [@comment.photo, @comment] %> |
+<!-- /posts/:post_id/comments/ -->
+<%= link_to 'Back', photo_comments_path(@comment.photo) %>
