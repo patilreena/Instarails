@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   resources :relationships do
     member do
       get :following, :followers
@@ -8,6 +9,9 @@ Rails.application.routes.draw do
   # resources :comments
   devise_for :users
   root 'home#index'
+
+    resources :users, only: [:show, :update], controller: :profiles
+  resource :profile
 
   resources :photos do
   	resources :comments
